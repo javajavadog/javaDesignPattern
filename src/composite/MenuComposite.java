@@ -1,3 +1,8 @@
+package composite;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MenuComposite extends MenuComponent{
     private List<MenuComponent> mComponentList = new ArrayList<MenuComponent>();

@@ -1,3 +1,5 @@
+package adapter;
+
 
 public class Toy {
     public void run(Electric5v e){

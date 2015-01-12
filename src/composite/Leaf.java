@@ -1,3 +1,5 @@
+package composite;
+
 
 public class Leaf extends MenuComponent {
     public void add(MenuComponent m){

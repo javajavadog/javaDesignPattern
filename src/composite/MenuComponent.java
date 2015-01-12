@@ -1,3 +1,5 @@
+package composite;
+
 
 abstract class MenuComponent {
     public String mName;

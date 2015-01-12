@@ -1,3 +1,5 @@
+package adapter;
+
 
 public class Adapter {
     public Electric5v getElectric5v(Electric220v e){
