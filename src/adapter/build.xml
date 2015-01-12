@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="adapter" default="help" basedir=".">
+  <target name="help">
+    <echo>  build:  Build this project and put release file to bin.</echo>
+    <echo>  clean:  Clean up.</echo>
+  </target>
+
+  <property name="src" location="."/>
+  <property name="build" location="build"/>
+  <property name="release" location="bin"/>
+
+  <target name="init">
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+    <mkdir dir="${release}"/>
+  </target>
+
+  <target name="compile" depends="init" description="compile the source">
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}" />
+  </target>
+
+  <target name="build" depends="compile">
+    <jar jarfile="${release}/demo.jar" basedir="${build}" >
+           <manifest>
+                <attribute name="Main-Class" value="Demo"/>
+            </manifest>
+    </jar>
+  </target>
+
+  <target name="clean">
+    <delete dir="${build}" />
+    <delete dir="${release}" />
+  </target>
+</project>
